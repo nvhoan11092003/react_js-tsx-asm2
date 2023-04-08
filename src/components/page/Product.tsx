@@ -37,9 +37,31 @@ const Product = () => {
             <div className=" grid grid-cols-2">
                 {/* image */}
                 <div className="">
-                    <img src={Product.images[0].base_url} alt="" />
-                    {/* <img className="max-h-[200px]" src={Product.images[0].base_url ? Product.images[0].base_url : ""} alt="" /> */}
+                    <img className="h-[450px] " src={Product.images?.[0].base_url} alt="" />
+                    <div className=" flex gap-x-2">
+                        {Product.images?.map((item, index) => {
+                            console.log(Product.images?.[0].base_url);
+                            return <img className="max-h-[100px] w-auto" src={Product.images?.[index].base_url} alt="" />
+                        })}
+                    </div>
                 </div>
+                <div className="">
+                    <div className="flex gap-x-2 items-end">
+                        <h1 className="text-red-500 text-2xl">{Product.price} đ</h1>
+                        <h2 className="text-gray-500">{Product.original_price} đ</h2>
+                    </div>
+                    <div className="h-[300px] mt-3">
+                        Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.
+                    </div>
+                    <div className="flex items-center gap-x-5">
+                        <button className="w-[200px] p-2 bg-red-500 text-white">Mua Ngay</button>
+                        <button className="w-[48px] border border-red-500 flex items-center justify-center"><img className="p-2 " src="../Icon.png" alt="giohang" /></button>
+                    </div>
+                </div>
+            </div>
+            <div className="">
+                <h1 className="text-red-500 text-2xl"> Đặc Điểm Nổi Bật</h1>
+                `${Product.description}`
             </div>
         </div>
     )
