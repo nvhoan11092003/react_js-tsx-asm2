@@ -1,5 +1,14 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "nvhoan11092003@gmail.com",
+      "password": "$2a$10$0cQyIVu/kzY.awS8ZFm1gOqa1hG3qYnOQb3R215mDc7vRPOjlvPli",
+      "first_name": "Nguyễn Văn",
+      "last_name": "Hoàn",
+      "ConfirmPassword": "",
+      "id": 1
+    }
+  ],
   "products": [
     {
       "id": 1,
