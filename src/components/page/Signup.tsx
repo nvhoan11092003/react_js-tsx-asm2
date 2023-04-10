@@ -2,6 +2,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from '@hookform/resolvers/yup';
 import { signUpSchema, signUpForm } from "../../models";
 import { signUp } from "../../api/auth";
+import { useNavigate } from "react-router-dom";
 
 
 const SignUp = () => {
@@ -9,12 +10,13 @@ const SignUp = () => {
         resolver: yupResolver(signUpSchema)
     })
 
+    const navigate = useNavigate()
 
     const onSubmit = async (data: signUpForm) => {
         try {
             const response = await signUp(data)
             console.log(response);
-
+            navigate("/signin")
         } catch (error) {
 
             console.log(error);
@@ -160,11 +162,12 @@ const SignUp = () => {
                                 </label>
 
                                 <input
-                                    // type={"password"}
+                                    type={"password"}
                                     {...register("password")}
 
                                     className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
                                 />
+
                                 <p className="text-red-500 text-sm">
                                     {errors.password && errors.password.message}
                                 </p>

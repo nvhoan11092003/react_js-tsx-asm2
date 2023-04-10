@@ -51,7 +51,7 @@ const Product = () => {
                         <h2 className="text-gray-500">{Product.original_price} đ</h2>
                     </div>
                     <div className="h-[300px] mt-3">
-                        Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản A73, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.
+                        Mô tả ngắn: Trước khi mua bất kỳ chiếc điện thoại nào, người dùng cũng sẽ quan tâm đến thiết kế sản phẩm trước. Với phiên bản {Product.name}, Samsung đã tạo nên một chiếc smartphone với vẻ ngoài mang đến cảm giác sang trọng và tinh tế.
                     </div>
                     <div className="flex items-center gap-x-5">
                         <button className="w-[200px] p-2 bg-red-500 text-white">Mua Ngay</button>
@@ -61,7 +61,8 @@ const Product = () => {
             </div>
             <div className="">
                 <h1 className="text-red-500 text-2xl"> Đặc Điểm Nổi Bật</h1>
-                `${Product.description}`
+                <div className="" dangerouslySetInnerHTML={{ __html: Product.description }}></div>
+
             </div>
         </div>
     )

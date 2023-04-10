@@ -7,6 +7,22 @@
       "last_name": "Hoàn",
       "ConfirmPassword": "",
       "id": 1
+    },
+    {
+      "email": "hoannvph28518@fpt.edu.vn",
+      "password": "$2a$10$0.PfBKL.uvNJ1kJ2kBBlC.lzF259YUqgVIz0IH7lasYcaYkGVzqyG",
+      "first_name": "Nguyễn Văn",
+      "last_name": "Hoàn",
+      "ConfirmPassword": "123456",
+      "id": 2
+    },
+    {
+      "email": "nguoitoiyeu2k3@gmail.com",
+      "password": "$2a$10$dmAoucYTTTYDc9HZdK0pKuL40MM9ZQccobNwtfGQyQmbNYqhil3Ii",
+      "first_name": "Nguyễn Văn",
+      "last_name": "Hoàn",
+      "ConfirmPassword": "123456",
+      "id": 3
     }
   ],
   "products": [
