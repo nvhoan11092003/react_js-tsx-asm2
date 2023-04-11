@@ -113,7 +113,7 @@ const SignUp = () => {
                                 <input
                                     {...register("first_name")}
 
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    className="mt-1 w-full rounded-md border bg-white text-sm text-gray-700 shadow-sm"
                                 />
                                 <p className="text-red-500 text-sm">
                                     {errors.first_name && errors.first_name.message}
@@ -131,7 +131,7 @@ const SignUp = () => {
                                 <input
                                     {...register("last_name")}
 
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    className="mt-1 w-full rounded-md border bg-white text-sm text-gray-700 shadow-sm"
                                 />
                                 <p className="text-red-500 text-sm">
                                     {errors.last_name && errors.last_name.message}
@@ -146,7 +146,7 @@ const SignUp = () => {
                                 <input
                                     {...register("email")}
 
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    className="mt-1 w-full rounded-md border bg-white text-sm text-gray-700 shadow-sm"
                                 />
                                 <p className="text-red-500 text-sm">
                                     {errors.email && errors.email.message}
@@ -165,7 +165,7 @@ const SignUp = () => {
                                     type={"password"}
                                     {...register("password")}
 
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    className="mt-1 w-full rounded-md border bg-white text-sm text-gray-700 shadow-sm"
                                 />
 
                                 <p className="text-red-500 text-sm">
@@ -185,7 +185,7 @@ const SignUp = () => {
                                     type={"password"}
                                     {...register("ConfirmPassword")}
 
-                                    className="mt-1 w-full rounded-md border-gray-200 bg-white text-sm text-gray-700 shadow-sm"
+                                    className="mt-1 w-full rounded-md border bg-white text-sm text-gray-700 shadow-sm"
                                 />
                                 <p className="text-red-500 text-sm">
                                     {errors.ConfirmPassword && errors.ConfirmPassword.message}
