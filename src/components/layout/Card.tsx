@@ -11,7 +11,7 @@ const Card = ({ data }: props) => {
     return (
         <Link to={link}>
             <div className="flex flex-col sm:block items-center">
-                <img className="max-h-[200px]" src={data.images[0].base_url} alt="" />
+                <img className="max-h-[200px]" src={data.images?.[0].base_url} alt="" />
                 <p className="mt-2 ">{data.name}</p>
                 <div className="my-2 flex gap-x-4">
                     <div className="flex gap-x-3">
