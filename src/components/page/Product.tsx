@@ -5,6 +5,7 @@ import { getById } from "../../api/products"
 
 const Product = () => {
     const { id } = useParams()
+
     const [Product, setproduct] = useState<IProduct>({} as IProduct)
     const fecthProductbyid = async (id: string) => {
         try {
@@ -18,8 +19,10 @@ const Product = () => {
     useEffect(() => {
         if (id) {
             fecthProductbyid(id)
+
         }
     }, [])
+
 
     return (
         <div className="container mx-auto">

@@ -111,7 +111,6 @@ const ProductCreate = () => {
             </div>
         </div>
     </section>
-
 }
 
 export default ProductCreate

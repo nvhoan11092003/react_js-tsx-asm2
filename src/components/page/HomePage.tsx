@@ -3,14 +3,15 @@ import Banner from "../layout/Banner"
 import { getAll } from "../../api/products"
 import { useEffect, useState } from "react"
 import { IProduct } from "../../models"
+
 const HomePage = () => {
     const [products, setproducts] = useState<IProduct[]>([])
+
     const fetchproducts = async () => {
         const { data } = await getAll()
         setproducts(data)
 
     }
-
     useEffect(() => {
         fetchproducts()
     }, [])

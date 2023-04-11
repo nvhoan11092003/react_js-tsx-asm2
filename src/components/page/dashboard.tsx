@@ -16,6 +16,10 @@ const Dashboard = () => {
         fetchProducts()
     }, [])
 
+    const deleteProduct = (id: string) => {
+        return null
+    }
+
     return <>
 
         <div className="overflow-x-auto rounded-lg border border-gray-200">
@@ -66,7 +70,8 @@ const Dashboard = () => {
                                 <img className="w-[200px]" src={product.images?.[0].base_url} alt="" />
                             </td>
                             <td className="text-center">
-                                <button className="bg-red-600 text-white rounded-md p-2">Xoá</button>
+                                <Link to={"/admin/product/delete/" + product.id} className="bg-red-600 ml-2 text-white rounded-md p-2">Xoá</Link>
+
                                 <Link to={"/admin/product/" + product.id} className="bg-yellow-600 ml-2 text-white rounded-md p-2">Sửa</Link>
                             </td>
                         </tr>
