@@ -5,6 +5,9 @@ import HomePage from "./components/page/HomePage";
 import Signup from "./components/page/Signup";
 import Signin from "./components/page/Signin";
 import Product from "./components/page/Product";
+import Dashboard from "./components/page/dashboard";
+import ProductUpdate from "./components/page/product-update";
+import ProductCreate from "./components/page/product-create";
 function App() {
   return (
     <BrowserRouter>
@@ -19,7 +22,10 @@ function App() {
         </Route>
         {/* admin */}
         <Route path="/admin" element={<AdminLayout></AdminLayout>}>
-
+          <Route index element={<Dashboard></Dashboard>} ></Route>
+          <Route path="/admin/product/:id" element={<ProductUpdate></ProductUpdate>}></Route>
+          <Route path="/admin/product/add" element={<ProductCreate></ProductCreate>}></Route>
+          <Route path="/admin/product/delete" element={<ProductCreate></ProductCreate>}></Route>
         </Route>
       </Routes>
     </BrowserRouter >

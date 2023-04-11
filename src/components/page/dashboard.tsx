@@ -17,8 +17,10 @@ const Dashboard = () => {
     }, [])
 
     return <>
-        <h2>Product list</h2>
+
         <div className="overflow-x-auto rounded-lg border border-gray-200">
+
+            <Link to={"/admin/product/add"}><button className="bg-blue-600  text-white rounded-md p-2">Thêm Sản Phẩm</button></Link>
             <table className="min-w-full divide-y-2 divide-gray-200 text-sm">
                 <thead>
                     <tr>
@@ -61,10 +63,11 @@ const Dashboard = () => {
                             <td className="whitespace-nowrap px-4 py-2 text-gray-700">{product.price}</td>
                             <td className="whitespace-nowrap px-4 py-2 text-gray-700">{product.original_price}</td>
                             <td className="whitespace-nowrap px-4 py-2 text-gray-700">
-                                <img className="w-[80%]" src={product.images?.[0].base_url} alt="" />
+                                <img className="w-[200px]" src={product.images?.[0].base_url} alt="" />
                             </td>
                             <td className="text-center">
                                 <button className="bg-red-600 text-white rounded-md p-2">Xoá</button>
+                                <Link to={"/admin/product/" + product.id} className="bg-yellow-600 ml-2 text-white rounded-md p-2">Sửa</Link>
                             </td>
                         </tr>
                     ))}
